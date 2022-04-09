@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import {
   ListItemIcon,
   ListItemText,
@@ -43,10 +44,12 @@ const SideBar = () => {
               Welcome Dany
             </Typography>
             {modules.map((module) => (
-              <MenuItem>
-                <ListItemIcon>{module.icon}</ListItemIcon>
-                <ListItemText>{module.name}</ListItemText>
-              </MenuItem>
+              <Link to={module.link}>
+                <MenuItem>
+                  <ListItemIcon>{module.icon}</ListItemIcon>
+                  <ListItemText>{module.name}</ListItemText>
+                </MenuItem>
+              </Link>
             ))}
           </MenuList>
         </Paper>
