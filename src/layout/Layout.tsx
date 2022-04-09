@@ -1,8 +1,6 @@
 import { Typography } from "@mui/material";
 import * as React from "react";
 import { useSelector } from "react-redux";
-import Module1 from "./Module1";
-import Module2 from "./Module2";
 import Module3 from "./Module3";
 import styles from "./Layout.module.css";
 import Settings from "./components/Settings";
@@ -11,6 +9,7 @@ import SideBar from "./components/SideBar";
 import { useAppSelector } from "../store/hooks";
 import { Route, Routes } from "react-router-dom";
 import Simulator from "Simulator/Simulator";
+import Library from "Library/Library";
 
 export default function Layout() {
   const settingsOpen = useAppSelector((state) => state.ui.settingIsVisible);
@@ -33,8 +32,9 @@ export default function Layout() {
       </div>
       <div className={styles.mainContent}>
         <Routes>
-          <Route path="/" element={<Module1 />} />
+          <Route path="/" element={<Module3 />} />
           <Route path="tools" element={<Simulator />} />
+          <Route path="library" element={<Library />} />
           <Route path="dashboard" element={<Module3 />} />
         </Routes>
       </div>

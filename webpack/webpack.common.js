@@ -45,6 +45,7 @@ module.exports = {
       remotes: {
         Simulator:
           "simulator@https://finplan-simulator.vercel.app/remoteEntry.js",
+        Library: "library@https://finplan-library.vercel.app/remoteEntry.js",
       },
       exposes: {},
       shared: {
