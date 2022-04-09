@@ -10,7 +10,7 @@ import ButtonAppBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import { useAppSelector } from "../store/hooks";
 import { Route, Routes } from "react-router-dom";
-// import Simulator from "Simulator/Simulator";
+import Simulator from "Simulator/Simulator";
 
 export default function Layout() {
   const settingsOpen = useAppSelector((state) => state.ui.settingIsVisible);
@@ -34,7 +34,7 @@ export default function Layout() {
       <div className={styles.mainContent}>
         <Routes>
           <Route path="/" element={<Module1 />} />
-          <Route path="tools" element={<Module2 />} />
+          <Route path="tools" element={<Simulator />} />
           <Route path="dashboard" element={<Module3 />} />
         </Routes>
       </div>
